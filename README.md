@@ -432,3 +432,14 @@ curl -X PUT http://localhost:8080/user -H 'Content-Type: application/json' -d '{
 ```
 {"error":false,"data":{"fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"(Rows matched: 1  Changed: 1  Warnings: 0","protocol41":true,"changedRows":1},"
 ```
+
+## 결론 
+
+express js 를 통해서 요청을 받고, 이를 mysql 모듈을 이용해서 DB 에 crud 를 해 보았습니다. 
+
+express 는 nodejs 를 이용하여 RESTAPI 를 구현할때 매우 편리한 기능들을 많이 제공해 줍니다. 
+
+특히 dispatch 기능, 그리고 middleware 와 같은 사항은 express를 사용하여 서버를 구현할때 매우 쉽게 개발할 수 있도록 해주는것 같습니다. 
+
+정말 간단한 예제이지만, 기본적인 사항은 모두 담겨 있는 예제입니다. 
+
