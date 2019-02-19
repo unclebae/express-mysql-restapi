@@ -3,6 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const mysql = require('mysql');
 
+const port = 8080;
+
 // Mysql Connection
 const mycon = mysql.createConnection({
     host: 'localhost',
@@ -31,7 +33,7 @@ app.get('/users', (req, res) => {
     )
 })
 
-app.get('/users/:id', (req, res) => {
+app.get('/user/:id', (req, res) => {
     let userId = Number(req.params.id);
     if (!userId) {
         return res.status(400).send({error: true, message: 'You have to provide userId.'})
@@ -116,9 +118,10 @@ app.put('/user', (req, res) => {
     )
 })
 
-app.listen(8080, (err) => {
+
+app.listen(port, (err) => {
     if (err) {
         console.log(err);
     }
-    console.log('Node app is running on port 8080');
+    console.log('Node app is running on port ' + port);
 })
